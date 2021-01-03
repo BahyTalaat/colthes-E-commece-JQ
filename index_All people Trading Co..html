@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fontawesome-free-5.15.1-web/css/all.css"> 
+    
+    
+  
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 
+    <title>ALL People Trading Co.</title>
+    <style>
+    .SignInAside,.Signupaside,.checkNamePassword,.ChangeUserNameOrPassword
+		{
+			display:none;
+		
+		}
+    a
+    {
+      color: black;
+    }
+    a:hover
+      {
+        color: green;
+      }
+     
+  
+
+    </style>
+</head>
+
+<body class="container-fluid bg-light">
+
+    <header class="container-fluid border">
+        <div class="container bg-light">
+        <div class="row py-2">
+           <a class="col-4" href="#">
+               Sell on ATC
+           </a>
+           <a class="col-4 text-center" href="#">
+               Kuwait
+           </a>
+        <a class="col-4 d-flex justify-content-end" href="#">
+               English
+        </a>
+
+        </div>
+    </div>
+     <div class="bg-white">
+        <div class="container ">
+            <nav class="navbar navbar-expand-lg navbar-light py-4">
+                <a class="navbar-brand" href="#">ALL People Trading Co.</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <form class="form-inline">
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                           
+                            <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                            </div>
+          
+                          </div>
+                          <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="d-flex flex-row nav-link" href="#" >
+                         <i class="fas fa-user pt-1"></i>
+                         <p class="px-2 CurrentUser"></p>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sign in
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" id="login_btn">Log in </a>
+                        <a class="dropdown-item" href="#" id="signUp_btn">Sign up</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Setting
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item Logout" href="#">Log out</a>
+                          <a class="dropdown-item change_account" href="#">change account</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                      </li>
+                      
+                      <li class="nav-item dropdown">
+                        <a class="nav-link " href="CartPage.html" id="navbarDropdown" role="button" >
+                          <i class="fas fa-shopping-cart">
+                            <span class="badge badge-light carditemsnumber">0</span>
+                          </i>
+                        </a>
+                       
+                      </li>
+                   
+                  </ul>
+                  
+                </div>
+              </nav>
+        </div>
+
+      </div>
+    </header>
+    <!-- container 2 -->
+    <div class="container py-4">
+          <div class="row">
+              <nav class="col-sm-3 p-3">
+                <ul id="menu" class="p-4">
+                  <li class="ui-state-disabled"><div>Toys (n/a)</div></li>
+                  <li><div><i class="fas fa-apple-alt"></i> SuperMarket</div></li>
+                  <li><div> <i class="fas fa-tshirt"></i> Clothing</div></li>
+                  <li><div> <i class="fas fa-utensils"></i> Health & Beatuy</div>
+                    <ul>
+                      <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                      <li><div>Car Hifi</div></li>
+                      <li><div>Utilities</div></li>
+                    </ul>
+                  </li>
+                  <li><div><i class="fas fa-mobile-alt"></i> Phones </div>
+                    <ul>
+                      <li><div><i class="fab fa-apple"></i> Apple</div></li>
+                      <li><div> <i class="fab fa-android"></i> Samsung</div></li>
+                      <li><div>Sony</div></li>
+                    </ul>
+                  
+                  </li>
+                  <li><div>Music</div>
+                    <ul>
+                      <li><div>Rock</div>
+                        <ul>
+                          <li><div>Alternative</div></li>
+                          <li><div>Classic</div></li>
+                        </ul>
+                      </li>
+                      <li><div>Jazz</div>
+                        <ul>
+                          <li><div>Freejazz</div></li>
+                          <li><div>Big Band</div></li>
+                          <li><div>Modern</div></li>
+                        </ul>
+                      </li>
+                      <li><div>Pop</div></li>
+                    </ul>
+                  </li>
+                  <li class="ui-state-disabled"><div>Specials (n/a)</div></li>
+                  <li><div>Electronics</div>
+                    <ul>
+                      <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                      <li><div>Car Hifi</div></li>
+                      <li><div>Utilities</div></li>
+                    </ul>
+                  </li>
+                  <li><div>Electronics</div>
+                    <ul>
+                      <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                      <li><div>Car Hifi</div></li>
+                      <li><div>Utilities</div></li>
+                    </ul>
+                  </li>
+                  <li><div><i class="fas fa-desktop"></i> Electronics</div>
+                    <ul>
+                      <li class="ui-state-disabled"><div>Home Entertainment</div></li>
+                      <li><div>Car Hifi</div></li>
+                      <li><div>Utilities</div></li>
+                    </ul>
+                  </li>
+                  
+                </ul>
+              </nav>
+
+                <div class="col-sm-6">
+                  <div id="carouselExampleCaptions" class="carousel slide mt-3" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" style="height: 400px;">
+                      <div class="carousel-item active">
+                        <img src="1.jpg" class="d-block w-100  alt="...">
+                        
+                      </div>
+                      <div class="carousel-item">
+                        <img src="2.jpg" class="d-block w-100" alt="...">
+                        
+                      </div>
+                      <div class="carousel-item">
+                        <img src="3.jpg" class="d-block w-100" alt="...">
+                        
+                      </div>
+                    
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon bg-danger" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon bg-danger" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+                </div>
+
+                <aside class="col-sm-3 pt-3"  style="height: 300px;">
+                    <a href="#">
+                         <img id="asideImg1" style="height: 200px;" class="mb-2 col-sm-10" src="2.jpg"  alt="...">
+                    </a>
+                    <a href="#">
+                      <img  id="asideImg2" style="height: 200px;" class="mb-2 col-sm-10" src="4.jpg"  alt="...">
+                    </a>
+                </aside>
+
+
+          </div>
+    </div>
+      <!-- container 3 -->
+      <section class="container p-3">
+        <h1 class="bg-info">Children Clothes| Up to 50% OFF</h1>
+        <div class="row justify-content-around">
+          <a href="Products.html" data-id=0  class="col-sm-2 product1" >
+            <div class=" border bg-warning px-2" style="position: absolute; left:110px;">-50%</div>
+            <img class="childrenIMG" style="height: 200px;" src="1.jpg"  alt="...">
+            <div class="px-2 py-2" style="position: absolute;font-size: 12px;line-height: .5em;">
+                  <p >Children dress</p>
+                  <b >EGP 490</b>
+                  <del >EGP 900</del>   
+            </div>
+          </a>
+          <a href="Products.html" data-id=1 class="col-sm-2 product1">
+              <div class=" border bg-warning px-2" style="position: absolute; left:135px;">-65%</div>
+              <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+              <div class="px-2 py-2" style="position: absolute;font-size: 12px;line-height: .5em;">
+                <p >Children dress</p>
+                <b >EGP 799</b>
+                <del >EGP 1000</del> 
+            </div>
+
+          </a>
+          <a class="col-sm-2 product1" href="Products.html" data-id=2>
+            <div class=" border bg-warning px-2" style="position: absolute; left:110px;">-30%</div>
+            <img class="childrenIMG" style="height: 200px;" src="Shoes.webp"  alt="...">
+            <div class="px-2 py-2" style="position: absolute;font-size: 12px;line-height: .5em;">
+                <p >Children dress</p>
+                <b >EGP 420</b>
+                <del >EGP 600</del> 
+            </div>
+
+          </a>
+          <a class="col-sm-2 product1" href="Products.html" data-id=3>
+                <div class=" border bg-warning px-2" style="position: absolute; left:110px;">-60%</div>
+                <img class="childrenIMG" style="height: 200px;" src="WomenJacket.jpg"  alt="...">
+                <div class="px-2 py-2" style="position: absolute;font-size: 12px;line-height: .5em;">
+                  <p >Children dress</p>
+                  <b >EGP 490</b>
+                  <del >EGP 900</del> 
+              </div>
+
+            </a>
+          <a class="col-sm-2 product1" href="Products.html" data-id=4>
+              <div class=" border bg-warning px-2" style="position: absolute; left:160px;">-70%</div>
+              <img class="childrenIMG" style="height: 200px;" src="sweetShirt.jpg"  alt="...">
+                <div class="px-2 py-2" style="position: absolute;font-size: 12px;line-height: .5em;">
+                  <p >Children dress</p>
+                  <b >EGP 490</b>
+                  <del >EGP 900</del> 
+              </div>
+            </a>
+         
+        </div>
+
+      </section>
+      <!-- container 4 -->
+      <section class="container p-3 mt-3">
+        <h1 class="bg-info">men Clothes| Up to 50% OFF</h1>
+        <div class="row justify-content-around">
+          <div class="col-sm-2" >
+            <img class="childrenIMG" style="height: 200px;" src="3.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="3.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="3.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="3.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="3.jpg"  alt="...">
+          </div>
+        </div>
+
+      </section>
+      <!-- container 5 -->
+      <section class="container p-3">
+        <h1 class="bg-info">men Clothes| Up to 50% OFF</h1>
+        <div class="row justify-content-around">
+          <div class="col-sm-2" >
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+        </div>
+
+      </section>
+       <!-- container 6 -->
+       <section class="container p-3">
+        <h1 class="bg-info">men Clothes| Up to 50% OFF</h1>
+        <div class="row justify-content-around">
+          <div class="col-sm-2" >
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+          <div class="col-sm-2">
+            <img class="childrenIMG" style="height: 200px;" src="4.jpg"  alt="...">
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+
+    <section class="SignInAside" title="Log in">
+      Welcome
+      <p class="validateTips" id="CheckMessage"></p>
+      <form action="" >
+          <input id="LogName" type="text" placeholder="User Name" required/>
+          <input id="LogPassword" type="password" placeholder="Password" required/>
+      </form>
+    </section>
+
+    <section class="ChangeUserNameOrPassword" title="Change account">
+      Enter field you want to change
+      <p class="validateTips" id="CheckMessageforChange"></p>
+      <form action="" >
+          <input id="NewName" type="text" placeholder="NewName" required/>
+          <input id="NewEmail" type="email" placeholder="NewEmail" required/>
+          <input id="NewPassword" type="password" placeholder="NewPassword" required/>
+      </form>
+    </section>
+   
+    <section id="dialog-form " class="Signupaside" title="Create new user">
+        <p class="validateTips">All form fields are required.</p>
+       
+       <form>
+           <fieldset>
+             <label for="name">Name</label>
+             <input type="text" name="name" id="name" placeholder="bahy talaat" class="text ui-widget-content ui-corner-all"><br>
+             <label for="email">Email</label>
+             <input type="text" name="email" id="email" placeholder="bahy@talaat.com" class="text ui-widget-content ui-corner-all"><br>
+             <label for="password">Password</label>
+             <input type="password" name="password" id="password" placeholder="xxxxxxx" class="text ui-widget-content ui-corner-all">
+       
+             
+             <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+           </fieldset>
+         </form>
+    </section>
+    
+ <!-- container footer -->
+    <footer class="container-fluid bg-warning">
+     
+
+
+  <div class="border border-top-0 border-left-0 border-right-0 text-center py-3 container">Looking to hire for long-term or full-time assignments? See how <a href="#">Upwork Payroll</a> simplifies admin. </div>
+  <div class="container">
+  <div class="row text-center my-4">
+             <div class="d-flex flex-column pb-2 col-lg-4 col-sm-6 col-xs-12">
+               <h4 class="mb-sm-3">Company</h4>
+               <a href="#">About Us</a>
+               <a href="#">Investor Relations</a>
+               <a href="#">Careers</a>
+               <a href="#">Upwork Foundation</a>
+               <a href="#">Press</a>
+               <a href="#">Trust, Safety & Security </a>
+               <a href="#">Terms of Service</a>
+               <a href="#">Privacy Policy</a>
+               <a href="#">Accessibility</a>
+             
+             </div>
+             <div class="d-flex flex-column pb-2 col-lg-4 col-sm-6 col-xs-12">
+               <h4 class="mb-sm-3"> Resources</h4>
+               <a href="#">Resources</a>
+               <a href="#">Customer Support</a>
+               <a href="#">Customer Stories</a>
+               <a href="#">Business Resources</a>
+               <a href="#">Payroll Services</a>
+               <a href="#">Upwork Reviews</a>
+
+             </div>
+             <div class="d-flex flex-column pb-2 col-lg-4 col-sm-6 col-xs-12">
+               <h4 class="mb-sm-3">Browse</h4>
+               <a href="#">Freelancers by Skill</a>
+               <a href="#">Freelancers in USA</a>
+               <a href="#">Freelancers in UK</a>
+               <a href="#">Freelancers in Canada</a>
+               <a href="#">Freelancers in Australia</a>
+               <a href="#">Jobs in USA</a>
+               <a href="#">Find Jobs</a>
+             
+             </div>
+   </div>
+ </div>
+ <div class="container my-3">
+       <div class="row border border-left-0 border-right-0 py-2 p-2 justify-content-between"> 
+         <div class="row align-items-center col-lg-8 col-sm-12">
+           <p>Follow us</p>
+           <div class="d-flex flex-row ml-3 ">
+               
+               <a href="#" class="p-2 ml-3 " >
+                 <i class="fab fa-facebook"></i>
+               </a>  
+               <a href="#" class="p-2 ml-3 ">
+                 <i class="fab fa-linkedin-in"></i>
+               </a>
+               <a href="#" class="p-2 ml-3 ">
+                 <i class="fab fa-twitter"></i>
+               </a>  
+               <a href="#" class="p-2 ml-3 ">
+                 <i class="fab fa-youtube"></i>
+               </a>
+               <a href="#" class="p-2 ml-3">
+                 <i class="fab fa-instagram"></i>
+               </a>  
+           </div>
+         </div>
+         <div class="row  col-lg-3 col-sm-12">
+             <p>Mobile App</p>
+             <div class="d-flex flex-row ml-3 col-5">
+                   <a href="#" class="p-2">
+                     <i class="fab fa-apple"></i>
+                   </a>
+                   <a href="#" class="p-2" >
+                     <i class="fab fa-facebook"></i>
+                   </a> 
+             </div>
+
+         </div>
+         
+         
+
+     </div>
+ </div>
+ <div class="container pb-5">
+   <p class="text-center">© Bahy Talaat Ragheb ITI Assuit Branch Intake 41.</p>
+ </div> 
+   
+        
+    </footer>
+
+
+<!-- ///////////Script Jquery -->
+ <script src="ProjectScript.js">
+   
+</script>
+</body>
+</html>
